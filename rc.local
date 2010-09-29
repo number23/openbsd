@@ -1,0 +1,41 @@
+#	$OpenBSD: rc.local,v 1.39 2006/07/28 20:19:46 sturm Exp $
+
+# Site-specific startup actions, daemons, and other things which
+# can be done AFTER your system goes into securemode.  For actions
+# which should be done BEFORE your system has gone into securemode
+# please see /etc/rc.securelevel.
+
+echo 'starting local daemons:'
+echo '/etc/rc.local: mount windows hard discs'
+mount_ntfs /dev/sd0i /mnt/c
+mount_ntfs /dev/sd0j /mnt/d
+
+echo '/etc/rc.local: connect to ADSL'
+ppp -ddial pppoe
+
+# 20091028
+# cd /var/db/pkg
+# pkg_info -M *
+if [ -x /usr/local/sbin/avahi-daemon ]; then
+	echo -n ' avahi-daemon'; /usr/local/sbin/avahi-daemon -D
+fi
+###
+if [ -x /usr/local/sbin/avahi-dnsconfd ]; then
+	echo -n ' avahi-dnsconfd'; /usr/local/sbin/avahi-dnsconfd -D
+fi
+###
+if [ -x /usr/local/bin/dbus-daemon ]; then
+	install -d -o _dbus -g _dbus /var/run/dbus
+	echo -n ' dbus'; /usr/local/bin/dbus-daemon --system
+fi
+###
+if [ -x /usr/local/sbin/famd ]; then
+	echo -n ' famd';	/usr/local/sbin/famd -T 0
+fi
+###################################################################
+
+# 20100330 
+echo -n ' dnsmasq'; /usr/local/sbin/dnsmasq
+
+echo ''
+

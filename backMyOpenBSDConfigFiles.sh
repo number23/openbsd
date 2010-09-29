@@ -10,3 +10,6 @@ cp -rf $HOME/.Xdefaults Xdefaults
 
 # system
 cp -rf /etc/sysctl.conf sysctl.conf
+cp -rf /etc/rc.conf.local rc.conf.local
+cp -rf /etc/rc.local rc.local
+cp -rf /etc/rc.securelevel rc.securelevel

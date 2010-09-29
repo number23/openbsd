@@ -1,0 +1,10 @@
+sshd_flags=NO
+accounting=YES
+#named_flags=""   ## disable it, use dnsmasq: 20100330
+sendmail_flags=NO
+inetd=NO
+nfsd_flags=NO
+
+# 20091028
+multicast_host=YES
+portmap=YES
