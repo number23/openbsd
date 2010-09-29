@@ -1,0 +1,8 @@
+xterm*termName: xterm-color
+xterm.*.colorMode: on
+xterm.*.dynamicColors: on
+xterm.*.loginShell: true
+xterm.*.scrollBar: false
+xterm.*faceName: Mono
+xterm.*faceSize: 13
+xterm.*.visualBell: true

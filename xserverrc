@@ -1,0 +1,10 @@
+#!/bin/sh
+#exec /usr/X11R6/bin/X -dpi 100 -nolisten tcp
+
+# find /etc/X11 -type f -print0 | xargs -0 grep nolisten
+#/etc/X11/xinit/xserverrc:exec /usr/bin/X11/X -dpi 100 -nolisten tcp
+
+
+
+exec /usr/X11R6/bin/X -nolisten tcp
+
