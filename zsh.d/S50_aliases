@@ -1,0 +1,5 @@
+#! /usr/bin/env zsh
+
+# 文件关联
+autoload -U zsh-mime-setup
+zsh-mime-setup

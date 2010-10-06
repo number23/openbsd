@@ -1,0 +1,67 @@
+#! /usr/bin/env zsh
+
+tohtml() {
+        if test -z $1 ; then
+                echo "tohtml <file>" >&2
+                return 1
+        fi
+        vim -e +:TOhtml +w +qa $1
+}
+
+function vman() { vim -c ":RMan ${*}" ; }
+function vimgrep () { tmp="$@" ; vim -c "vimgrep $tmp" ; }
+
+function xpwd () { echo $PWD | xclip -i ; xclip -o ; }
+function xcd () { cd `xclip -o` ; }
+
+function sum() { SUM=0; while read NUM; do SUM=$(($SUM+$NUM)); done; echo $SUM; }
+
+# generate html file from current directory
+function dir-tohtml() {
+    local td=""
+    local of=""
+    if [ $# = 1 ]; then
+        of=$1;
+    elif [ $# = 2 ]; then
+        td=$1;
+        of=$2;
+    else
+        echo "$0 [dir] <file>";
+        exit 1;
+    fi
+    if [ ! -d $td ]; then
+        echo "$0 [dir] <file>";
+        exit 1;
+    fi
+    local dir_list;
+    if [ "x$td" = "x" ]; then
+        dir_list=(`ls .`)
+    else
+        dir_list=(`ls $td`)
+    fi
+    local real_path="";
+    if [ "x$td" = "x" ]; then
+        real_path=`pwd`
+    else
+        if [ ! $td = "/" ]; then
+            real_path=$td
+        fi
+    fi
+
+    echo -e "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd\">\n" \
+            "<html>\n" \
+            "<head>\n" \
+            "<title>$of</title>\n" \
+            "<meta http-equiv=\"content-type\" content=\"text/html\"; charset=UTF-8\">" \
+            "</head>\n" \
+            "\t<body bgcolor=\"#808080\" text=\"#ffffff\">\n" \
+            "\t<font face=\"monospace\">" > $of
+    for i in ${dir_list[@]};
+    do
+        echo -e "\t\t<a href=\"file://$real_path/$i\">$i</a>\n" \
+                "\t\t<br>" >> $of
+    done
+    echo -e "\t</font>\n" \
+            "\t</body>\n" \
+            "</html>\n" >> $of
+}

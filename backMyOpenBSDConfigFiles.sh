@@ -2,6 +2,8 @@
 cd $HOME/hgroot/bitbucket.org/openbsd
 
 cp -rf $HOME/.zprofile zprofile
+rm -rf zsh.d
+cp -rf $HOME/.zsh.d zsh.d
 cp -rf $HOME/.aliasrc.d/S10_general aliasrc.S10_general
 
 cp -rf $HOME/.xinitrc xinitrc
