@@ -15,3 +15,10 @@ cp -rf /etc/sysctl.conf sysctl.conf
 cp -rf /etc/rc.conf.local rc.conf.local
 cp -rf /etc/rc.local rc.local
 cp -rf /etc/rc.securelevel rc.securelevel
+cp -rf /etc/mk.conf mk.conf
+sudo cp -rf /etc/ppp/ppp.conf ppp.conf
+sudo chown $USER ppp.conf
+sed '26,$d' ppp.conf | sed 's/authname.*/authname #########/' | sed 's/authkey.*/authkey #########/' > tmp.txt 
+mv tmp.txt ppp.conf
+sudo cp -rf /etc/pf.conf pf.conf
+sudo chown $USER pf.conf
