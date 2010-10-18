@@ -1,0 +1,29 @@
+#pkg_host0=ftp://ftp.openbsd.org
+#pkg_host1=ftp://ftp.freebsdchina.org
+#pkg_host2=ftp://ftp.openbsd.org.tw
+pkg_host3=ftp://ftp.tw.openbsd.org
+#pkg_host4=ftp://ftp.de.openbsd.org
+#pkg_host5=ftp://ftp.pak.com.cn
+#kg_host6=ftp://ftp.jaist.ac.jp
+
+#export PKG_PATH=$pkg_host0/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
+#export PKG_PATH=$pkg_host1/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
+#export PKG_PATH=$pkg_host2/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
+export PKG_PATH=$pkg_host3/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
+#export PKG_PATH=$pkg_host4/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
+#export PKG_PATH=$pkg_host5/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
+#export PKG_PATH=$pkg_host6/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
+
+alias make.install.clean='sudo make install clean'
+alias make.uninstall='sudo make uninstall'
+alias make.reinstall='sudo make reinstall'
+alias make.package='sudo make package'
+alias make.clean='sudo make clean'
+alias make.clean.depends='sudo make clean=depends'
+alias make.clean.dist='sudo make clean=dist'
+alias make.clean.flavors='sudo make clean=flavors'
+alias make.clean.package='sudo make clean=package'
+alias make.show.flavors='sudo make show=FLAVORS'
+alias make.show.packages='sudo make show=PACKAGES'
+alias make.show.mulit.packages='sudo make show=MULIT_PACKAGES'
+alias make.show.maintainer='sudo make show=MAINTAINER'

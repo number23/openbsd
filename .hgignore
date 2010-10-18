@@ -1,0 +1,8 @@
+# use glob syntax.
+syntax: glob
+*.py[co]
+*.class
+
+# switch to regexp syntax.
+syntax: regexp
+^\.pc/

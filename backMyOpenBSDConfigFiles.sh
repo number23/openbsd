@@ -5,10 +5,17 @@ cp -rf $HOME/.zprofile zprofile
 rm -rf zsh.d
 cp -rf $HOME/.zsh.d zsh.d
 cp -rf $HOME/.aliasrc.d/S10_general aliasrc.S10_general
+cp -rf $HOME/.aliasrc.d/S80_ports aliasrc.S80_ports
 
 cp -rf $HOME/.xinitrc xinitrc
 cp -rf $HOME/.xserverrc xserverrc
 cp -rf $HOME/.Xdefaults Xdefaults
+
+#vim
+cp -rf $HOME/.vimrc vimrc
+cp -rf $HOME/.vim/autoload vim/autoload
+cp -rf $HOME/.vim/ftplugin vim/ftplugin
+cp -rf $HOME/.vim/plugin vim/plugin
 
 # system
 cp -rf /etc/sysctl.conf sysctl.conf
@@ -22,3 +29,4 @@ sed '26,$d' ppp.conf | sed 's/authname.*/authname #########/' | sed 's/authkey.*
 mv tmp.txt ppp.conf
 sudo cp -rf /etc/pf.conf pf.conf
 sudo chown $USER pf.conf
+

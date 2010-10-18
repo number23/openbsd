@@ -33,7 +33,6 @@ export LANG=en_US.UTF-8
 
 PATH=.
 PATH=$PATH:$HOME/tools/bin
-PATH=$PATH:$HOME/tools/jython-2.5.0
 PATH=$PATH:$HOME/bin
 PATH=$PATH:/sbin:/usr/sbin
 PATH=$PATH:/bin:/usr/bin
@@ -61,3 +60,5 @@ export PATH=$PATH:$SCALA_HOME/bin
 
 export AUTOCONF_VERSION=2.62
 export AUTOMAKE_VERSION=1.9
+
+export PATH=$HOME/tools/node/bin:$PATH
