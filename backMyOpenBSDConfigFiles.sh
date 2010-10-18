@@ -13,6 +13,7 @@ cp -rf $HOME/.Xdefaults Xdefaults
 
 #vim
 cp -rf $HOME/.vimrc vimrc
+rm -rf vim/*
 cp -rf $HOME/.vim/autoload vim/autoload
 cp -rf $HOME/.vim/ftplugin vim/ftplugin
 cp -rf $HOME/.vim/plugin vim/plugin
