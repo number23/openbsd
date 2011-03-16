@@ -1,15 +1,15 @@
-#pkg_host0=ftp://ftp.openbsd.org
+pkg_host0=ftp://ftp.openbsd.org
 #pkg_host1=ftp://ftp.freebsdchina.org
 #pkg_host2=ftp://ftp.openbsd.org.tw
-pkg_host3=ftp://ftp.tw.openbsd.org
+#pkg_host3=ftp://ftp.tw.openbsd.org
 #pkg_host4=ftp://ftp.de.openbsd.org
 #pkg_host5=ftp://ftp.pak.com.cn
 #kg_host6=ftp://ftp.jaist.ac.jp
 
-#export PKG_PATH=$pkg_host0/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
+export PKG_PATH=$pkg_host0/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
 #export PKG_PATH=$pkg_host1/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
 #export PKG_PATH=$pkg_host2/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
-export PKG_PATH=$pkg_host3/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
+#export PKG_PATH=$pkg_host3/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
 #export PKG_PATH=$pkg_host4/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
 #export PKG_PATH=$pkg_host5/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/
 #export PKG_PATH=$pkg_host6/pub/OpenBSD/$(uname -r)/packages/$(machine -a)/

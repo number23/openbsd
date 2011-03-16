@@ -37,6 +37,7 @@ set ruler             " show current positions along the bottom
 "set number            " show line number
 set paste             " paste context with format
 
+
 " zc: close
 " zo: open
 " zf: create
@@ -60,6 +61,7 @@ if has("gui_running")
     set guioptions-=T 
 "set guifont=Consolas\ 12
     set guifont=Monaco\ 12
+
 endif
 
 
@@ -67,8 +69,7 @@ endif
 set autochdir
 
 "let Tlist_Ctags_Cmd = '/usr/bin/ctags'
-
-map <F8> :VTreeExplore<CR>
+map <F8> :Explore<CR>
 map <F9> :TlistToggle<CR>
 map <F11> gg=G
 map <F12> :%s= *$==<cr>
@@ -80,6 +81,13 @@ map <C-Left> :bp<CR>
 map <C-Right> :bn<CR>
 map <F4> :bd<CR>
 map <C-Q> :bdelete<CR>
+
+"insert mode
+imap <c-s> <c-o>:up<cr>
+nmap <c-s> :up<cr>
+imap <c-v> <c-o>"+gP
+imap <c-z> <c-o>u
+imap <c-y> <c-o><c-r>
 
 "==== omni
 imap <C-L> <C-x><C-o>
@@ -93,6 +101,23 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1 
+
+" Remove trailing whitespace when writing a buffer, but not for diff files.
+" From: Vigil 
+function RemoveTrailingWhitespace()
+    if &ft != "diff"
+        let b:curcol = col(".")
+        let b:curline = line(".")
+        silent! %s/\s\+$//
+        silent! %s/\(\s*\n\)\+\%$//
+        call cursor(b:curline, b:curcol)
+    endif
+endfunction
+autocmd BufWritePre * call RemoveTrailingWhitespace()
+
+" for Clojure
+au Bufenter,Bufnewfile *.clj setl complete+=k~/.clj_completions
+
 
 " http://www.vim.org/scripts/script.php?script_id=1000
 "A collection of C extension Vim syntax. $HOME/.vim/after/syntax

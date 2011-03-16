@@ -48,17 +48,21 @@ export SDL_VIDEO_X11_DGAMOUSE=0
 
 export CVSROOT=anoncvs@anoncvs.de.openbsd.org:/cvs
 
-export JAVA_HOME=/usr/local/jdk-1.7.0
-export CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar
-export PATH=$PATH:$JAVA_HOME/bin
-
-export ANT_HOME=/usr/local/ant
-
-#export SCALA_HOME=$HOME/svnroot/scala/build/pack
-export SCALA_HOME=$HOME/tools/scala
-export PATH=$PATH:$SCALA_HOME/bin
-
 export AUTOCONF_VERSION=2.62
 export AUTOMAKE_VERSION=1.9
 
-export PATH=$HOME/tools/node/bin:$PATH
+# Java
+export JAVA_HOME=/usr/local/jdk-1.7.0
+export CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar
+export PATH=$PATH:$JAVA_HOME/bin
+export ANT_HOME=/usr/local/ant
+
+# Clojure
+export CLOJURE_HOME=$HOME/opt/clojure-1.2.0
+
+# Scala
+export SCALA_HOME=$HOME/opt/scala
+export PATH=$PATH:$SCALA_HOME/bin
+
+# Node.js
+export PATH=$HOME/opt/node/bin:$PATH
