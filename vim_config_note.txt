@@ -1,0 +1,68 @@
+" http://www.vim.org/scripts/script.php?script_id=1000
+"A collection of C extension Vim syntax. $HOME/.vim/after/syntax
+"let glib_enable_deprecated = 1
+"let glib_deprecated_errors = 1
+
+" load snippest
+" cd svnroot
+" svn checkout http://snippetsemu.googlecode.com/svn/trunk/ snippetsemu-read-only
+"set runtimepath+=~/svnroot/snippetsemu-read-only
+"set runtimepath+=~/svnroot/snippetsemu-read-only/after
+
+"---------------------------------------------------------------------------------
+"autocmd bufnewfile *.py call setline(1,'#! /usr/bin/env python') |
+"    \ call setline(2,'# -*- coding: utf-8 -*-') |
+"    \ call setline(3,'') |
+"    \ call setline(4, strftime("# Create Date: %F %T")) |
+"    \ call setline(5,'# Author: number23') |
+"    \ call setline(6,'# Blog: http://twitter.com/number23_cn') |
+"    \ call setline(7,'') |
+"    \ call setline(8,'') |
+"    \ exe "normal G"
+
+"map <F11> gg=G
+"map <C-T> :tabnew<CR>
+"map <C-W> :tabclose<CR>
+"map <S-Left> :tabprev<CR>
+"map <S-Right> :tabnext<CR>
+"map <C-Left> :bp<CR>
+"map <C-Right> :bn<CR>
+
+"Python iMaps
+"au FileType python inoremap <buffer> $r return
+"au FileType python inoremap <buffer> $s self
+"au FileType python inoremap <buffer> $c ##<cr>#<space><cr>#<esc>kla
+"au FileType python inoremap <buffer> $f from
+"au FileType python inoremap <buffer> $i import
+"au FileType python inoremap <buffer> $p print
+"au FileType python inoremap <buffer> $d """<cr>"""<esc>O
+
+"ab xif if ( ) {<return><return>}<up><up><end><left><left><left><left>
+"ab xelsif elsif ( ) {<return><return>}<up><up><end><left><left><left><left>
+"ab xelse else {<return><return>}<up><home><space><space><space>
+"ab xfor for ( ) {<return><return>}<up><up><end><left><left><left><left>
+"ab xforeach foreach ( ) {<return><return>}<up><up><end><left><left><left><left><left><left>
+"ab xwhile while ( ) {<return><return>}<up><up><end><left><left><left><left>
+
+"change work folder
+"cd ~/tmp
+
+"set foldenable        " turn on folding
+"set foldmethod=indent " make folding indent sensitive
+"set foldlevel=100     " don't autofold anything
+"set foldopen-=search  " don't open folds when you search into them
+"set foldopen-=undo    " don't open folds when you undo stuff
+
+"runtime! ftplugin/man.vim
+"use :Man
+
+":s/aa/bb/g      将光标所在行出现的所有包含 aa 的字符串中的 aa 替换为 bb
+":s/\<aa\>/bb/g  将光标所在行出现的所有 aa 替换为 bb, 仅替换 aa 这个单词
+":%s/aa/bb/g     将文档中出现的所有包含 aa 的字符串中的 aa 替换为 bb
+":12,23s/aa/bb/g 将从12行到23行中出现的所有包含 aa 的字符串中的 aa 替换为 bb
+":12,23s/^/#/    将从12行到23行的行首加入 # 字符
+":g/^\s*$/d      将所有不包含字符(空格也不包含)的空行删除.
+":g/^/exec "s/^/".strpart(line(".")." ", 0, 4)   在行首插入行号
+" gUU   行大写
+" guu   行小写
+
