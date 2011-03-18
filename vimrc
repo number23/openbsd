@@ -67,7 +67,7 @@ map <F9> :TlistToggle<CR>
 map <F4> :bdelete<CR>
 map <C-Q> :bdelete<CR>
 " Ctrl + C
-nmap <C-C> "+y<CR>
+map <C-C> "+y<CR>
 "insert mode
 imap <c-s> <c-o>:up<cr>
 nmap <c-s> :up<cr>
