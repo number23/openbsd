@@ -1,41 +1,43 @@
+" backup setting
 set dir=~/.vim/swp
 set backup
 set backupdir=~/.vim/backup/
 set backupext=.bak
 
-set autoindent        "always set autoindenting on
-set smartindent       "set smart indent
-set smarttab          "use tabs at the start of a line, spaces elsewhere
-set expandtab         "not use tab
+set autoindent        " always set autoindenting on
+set smartindent       " set smart indent
+set smarttab          " use tabs at the start of a line, spaces elsewhere
+set expandtab         " not use tab
 set tabstop=4 softtabstop=4 shiftwidth=4
-set linespace=4
+set linespace=2
 set backspace=2
 
-set smartcase
+set smartcase         " set smart case
 set ignorecase        " easier to ignore case for searching
 set incsearch         " do incremental searching
 set hlsearch          " highlighting the last used search pattern. or :noh
 "set list             " show chars on end of line, whitespace, etc
 "set nowrap           " do not wrap lines
 
+set nocompatible      " explicitly get out of vi-compatible mode
+set noexrc            " don't use local version of .(g)vimrc, .exrc
 set wildmenu          " command-line completion operates in an enhanced mode
 set history=50        " keep 50 lines of command line history
 set mouse=a           " set mouse functions
+set ruler             " show current positions along the bottom
+set paste             " paste context with format
 
 "don't make noise
 set noerrorbells
 set novisualbell
+set visualbell t_vb=
 
 filetype on           " detect the type of file
 filetype plugin on    " load plugin
 filetype indent on
 syntax on             " syntax highlighting on
-set fileformats=unix,dos
+set fileformats=unix,dos,mac
 set textwidth=80
-set ruler             " show current positions along the bottom
-"set number            " show line number
-set paste             " paste context with format
-
 
 " zc: close
 " zo: open
@@ -45,7 +47,6 @@ set fdm=marker
 
 set encoding=utf-8
 set fileencoding=utf-8
-"set fileencodings=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 
 if has("gui_running")
@@ -81,7 +82,6 @@ autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 " for Clojure
 au Bufenter,Bufnewfile *.clj setl complete+=k~/.clj_completions
 
-
 "minibufexplorer
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
@@ -100,7 +100,6 @@ function RemoveTrailingWhitespace()
     endif
 endfunction
 autocmd BufWritePre * call RemoveTrailingWhitespace()
-
 
 "   map : all
 "   nmap: normal map
