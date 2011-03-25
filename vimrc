@@ -40,12 +40,6 @@ set fileformat=unix
 set fileformats=unix,dos,mac
 set textwidth=80
 
-" zc: close
-" zo: open
-" zf: create
-" zd: delete
-set fdm=marker
-
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -81,7 +75,7 @@ nmap <s-tab> v<
 vmap <tab> >gv
 vmap <s-tab> <gv
 
-"==== omni
+" ==== omni ====
 imap <c-l> <c-x><c-o>
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 " for Clojure
@@ -117,12 +111,8 @@ autocmd BufWritePre * call RemoveTrailingWhitespace()
 "   v:name        " vim
 "   a:name        " function param
 "
-"   :argdo %s/oldvalue/newvalue/g
-"   :1,5 co 10
-"   ga              " hex
-"   :set noma       " non modifiable
-"   :set ro         " read only
-"   #session
-"       vim file1.c file2.c
-"       :mksession
-"       vim -S Session.vim
+" set fdm=marker
+" zc: close
+" zo: open
+" zf: create
+" zd: delete
