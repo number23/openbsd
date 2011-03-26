@@ -15,8 +15,13 @@ cp -rf $HOME/.Xdefaults Xdefaults
 cp -rf $HOME/.vimrc vimrc
 rm -rf vim/*
 cp -rf $HOME/.vim/autoload vim/autoload
+cp -rf $HOME/.vim/bin vim/bin
+cp -rf $HOME/.vim/doc vim/doc
+cp -rf $HOME/.vim/ftdetect vim/ftdetect
 cp -rf $HOME/.vim/ftplugin vim/ftplugin
+cp -rf $HOME/.vim/indent vim/indent
 cp -rf $HOME/.vim/plugin vim/plugin
+cp -rf $HOME/.vim/syntax vim/syntax
 
 # system
 cp -rf /etc/sysctl.conf sysctl.conf
@@ -26,8 +31,7 @@ cp -rf /etc/rc.securelevel rc.securelevel
 cp -rf /etc/mk.conf mk.conf
 sudo cp -rf /etc/ppp/ppp.conf ppp.conf
 sudo chown $USER ppp.conf
-sed '26,$d' ppp.conf | sed 's/authname.*/authname #########/' | sed 's/authkey.*/authkey #########/' > tmp.txt 
+sed '26,$d' ppp.conf | sed 's/authname.*/authname #########/' | sed 's/authkey.*/authkey #########/' > tmp.txt
 mv tmp.txt ppp.conf
 sudo cp -rf /etc/pf.conf pf.conf
 sudo chown $USER pf.conf
-

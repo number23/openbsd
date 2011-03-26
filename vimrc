@@ -74,6 +74,7 @@ nmap <tab> v>
 nmap <s-tab> v<
 vmap <tab> >gv
 vmap <s-tab> <gv
+nnoremap <F5> :GundoToggle<cr>
 
 " ==== omni ====
 imap <c-l> <c-x><c-o>
