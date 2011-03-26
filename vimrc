@@ -74,12 +74,13 @@ nmap <tab> v>
 nmap <s-tab> v<
 vmap <tab> >gv
 vmap <s-tab> <gv
-nnoremap <F5> :GundoToggle<cr>
+nmap <F5> :GundoToggle<cr>
 
 " ==== omni ====
 imap <c-l> <c-x><c-o>
-autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-" for Clojure
+
+" ==== autocmd ===
+au Filetype java setlocal omnifunc=javacomplete#Complete
 au Bufenter,Bufnewfile *.clj setl complete+=k~/.clj_completions
 
 "minibufexplorer
@@ -112,8 +113,9 @@ autocmd BufWritePre * call RemoveTrailingWhitespace()
 "   v:name        " vim
 "   a:name        " function param
 "
-" set fdm=marker
-" zc: close
-" zo: open
-" zf: create
-" zd: delete
+"   set fdm=marker
+"   zc: close
+"   zo: open
+"   zf: create
+"   zd: delete
+"   use jQuery syntax: set syntax=jquery
