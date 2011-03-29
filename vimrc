@@ -9,7 +9,7 @@ set smartindent       " set smart indent
 set smarttab          " use tabs at the start of a line, spaces elsewhere
 set expandtab         " replace tab to whitespace
 set tabstop=4 softtabstop=4 shiftwidth=4
-set linespace=4
+set linespace=2
 set backspace=2
 
 set smartcase         " set smart case
@@ -18,6 +18,7 @@ set incsearch         " do incremental searching
 set hlsearch          " highlighting the last used search pattern. or :noh
 "set list             " show chars on end of line, whitespace, etc
 "set nowrap           " do not wrap lines
+set autochdir         " auto change work dir
 
 set nocompatible      " explicitly get out of vi-compatible mode
 set noexrc            " don't use local version of .(g)vimrc, .exrc
@@ -55,10 +56,7 @@ if has("gui_running")
     set guifont=Monaco\ 12
 endif
 
-"auto change work dir
-set autochdir
-
-"let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+" ==== keys mapping ===
 map <F8> :Explore<CR>
 map <F9> :TlistToggle<CR>
 map <F4> :bdelete<CR>
@@ -75,7 +73,7 @@ nmap <tab> v>
 nmap <s-tab> v<
 vmap <tab> >gv
 vmap <s-tab> <gv
-nmap <F5> :GundoToggle<cr>
+"nmap <F2> :GundoToggle<cr>
 
 " ==== omni ====
 imap <c-l> <c-x><c-o>
