@@ -5,6 +5,7 @@ cp -rf $HOME/.zprofile zprofile
 rm -rf zsh.d
 cp -rf $HOME/.zsh.d zsh.d
 cp -rf $HOME/.aliasrc.d/S10_general aliasrc.S10_general
+cp -rf $HOME/.aliasrc.d/S40_mplayer aliasrc.S40_mplayer
 cp -rf $HOME/.aliasrc.d/S80_ports aliasrc.S80_ports
 
 cp -rf $HOME/.xinitrc xinitrc

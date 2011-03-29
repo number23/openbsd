@@ -1,0 +1,10 @@
+# fm887
+#alias mplayer='$HOME/tools/mplayer/bin/mplayer -cache 1024 -cache-min 30 '
+alias mplayer='mplayer -cache 1024 -cache-min 30 '
+alias hitfm='mplayer http://live.hitfm.cn/fm887'
+#alias fm887='mplayer rtsp://219.142.120.25/encoder/fm887'
+alias p887='mplayer http_proxy=http://127.0.0.1:3128 http://live.hitfm.cn/fm887'
+
+alias newsfm='mplayer rtsp://real.crinewsradio.cn/encoder/crinewsradio'
+alias easyfm='mplayer mms://enmms.chinabroadcast.cn/fm91.5'
+alias fm993='mplayer mms://live.fm993.com.cn/musicfm'

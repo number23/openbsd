@@ -9,7 +9,7 @@ set smartindent       " set smart indent
 set smarttab          " use tabs at the start of a line, spaces elsewhere
 set expandtab         " replace tab to whitespace
 set tabstop=4 softtabstop=4 shiftwidth=4
-set linespace=2
+set linespace=4
 set backspace=2
 
 set smartcase         " set smart case
@@ -43,6 +43,7 @@ set textwidth=80
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set ambiwidth=double
 
 if has("gui_running")
     set lines=25
@@ -119,3 +120,5 @@ autocmd BufWritePre * call RemoveTrailingWhitespace()
 "   zf: create
 "   zd: delete
 "   use jQuery syntax: set syntax=jquery
+"   :help modeline
+"   /* vim: set tabstop=4 shiftwidth=4 expandtab: */
