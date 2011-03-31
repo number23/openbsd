@@ -81,6 +81,8 @@ imap <c-l> <c-x><c-o>
 " ==== autocmd ===
 au Filetype java setlocal omnifunc=javacomplete#Complete
 au Bufenter,Bufnewfile *.clj setl complete+=k~/.clj_completions
+au BufRead,BufNewFile *.json setfiletype json
+au BufRead,BufNewFile *.ejs setfiletype html
 
 "minibufexplorer
 let g:miniBufExplMapWindowNavVim = 1
