@@ -58,10 +58,10 @@ if has("gui_running")
 endif
 
 " ==== keys mapping ===
-map <F8> :Explore<cr>
 map <F9> :TlistToggle<cr>
 map <F4> :bdelete<cr>
 map <F5> %
+map <F6> :Explore<cr>
 map <c-q> :bdelete<cr>
 map <c-c> "+y<cr>
 imap <c-s> <c-o>:up<cr>
