@@ -53,20 +53,23 @@ if has("gui_running")
     set guioptions-=m
     set guioptions-=T
 "set guifont=Consolas\ 12
+"set guifont=YaHei\ Consolas\ Hybrid\ 11
     set guifont=Monaco\ 12
 endif
 
 " ==== keys mapping ===
-map <F8> :Explore<CR>
-map <F9> :TlistToggle<CR>
-map <F4> :bdelete<CR>
-map <c-q> :bdelete<CR>
-map <c-c> "+y<CR>
+map <F8> :Explore<cr>
+map <F9> :TlistToggle<cr>
+map <F4> :bdelete<cr>
+map <F5> %
+map <c-q> :bdelete<cr>
+map <c-c> "+y<cr>
 imap <c-s> <c-o>:up<cr>
 nmap <c-s> :up<cr>
 imap <c-v> <c-o>"+gP
 imap <c-z> <c-o>u
 imap <c-y> <c-o><c-r>
+imap <c-f> function () {}<Left>
 " Normal Mode, Visual Mode, and Select Mode,
 " use <Tab> and <Shift-Tab> to indent
 nmap <tab> v>
