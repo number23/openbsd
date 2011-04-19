@@ -13,16 +13,16 @@ cp -rf $HOME/.xserverrc xserverrc
 cp -rf $HOME/.Xdefaults Xdefaults
 
 #vim
-cp -rf $HOME/.vimrc vimrc
-rm -rf vim/*
-cp -rf $HOME/.vim/autoload vim/autoload
-cp -rf $HOME/.vim/bin vim/bin
-cp -rf $HOME/.vim/doc vim/doc
-cp -rf $HOME/.vim/ftdetect vim/ftdetect
-cp -rf $HOME/.vim/ftplugin vim/ftplugin
-cp -rf $HOME/.vim/indent vim/indent
-cp -rf $HOME/.vim/plugin vim/plugin
-cp -rf $HOME/.vim/syntax vim/syntax
+##cp -rf $HOME/.vimrc vimrc
+##rm -rf vim/*
+##cp -rf $HOME/.vim/autoload vim/autoload
+##cp -rf $HOME/.vim/bin vim/bin
+##cp -rf $HOME/.vim/doc vim/doc
+##cp -rf $HOME/.vim/ftdetect vim/ftdetect
+##cp -rf $HOME/.vim/ftplugin vim/ftplugin
+##cp -rf $HOME/.vim/indent vim/indent
+##cp -rf $HOME/.vim/plugin vim/plugin
+##cp -rf $HOME/.vim/syntax vim/syntax
 
 # system
 cp -rf /etc/sysctl.conf sysctl.conf
